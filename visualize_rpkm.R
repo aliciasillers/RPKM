@@ -1,6 +1,7 @@
 library(tidyverse)
 library(DBI)
 library(reshape)
+library(viridis)
 
 # read and process data 
 
@@ -18,9 +19,9 @@ colnames(finalexpr) <- c("gene", "variable", "value", "sample")
 
 # heatmap
 
-png("pmr4exp.png", width = 19, height = 20.5, units = "cm", res = 900)
+png("pmr4exp.png", width = 21, height = 15, units = "cm", res = 900)
 
-myplot <- ggplot(finalexpr, aes(gene, sample)) + geom_tile(aes(fill = value)) + scale_fill_gradient(low = "pink", high = "maroon") + labs(title = "PMR4 Homeologue Expression", x = "PMR4 Homeologue", y = "Sample")
+myplot <- ggplot(finalexpr, aes(sample, gene)) + geom_tile(aes(fill = value)) + scale_fill_viridis(name = "RPKM") + labs(title = "PMR4 Homeologue Expression", x = "Sample", y = "Gene") + theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
 print(myplot)
 dev.off()
