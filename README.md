@@ -1,6 +1,6 @@
-# RNAseq for Expression Analysis of Candidate Susceptibility Genes
+# RPKM: Normalized Expression Data from Public RNAseq Data
 
-Some scripts are not generalized and will need to be modified to run with different input data. Workflow steps and associated scripts are as follows:
+This repository contains scripts written for the creation of a gene expression atlas in strawberry, for the purpose of analyzing expression of candidate susceptibility genes. However, the scripts can be modified to get rpkm data for any gene. Workflow steps and associated scripts are listed below.
 
 ## Creating conda environment
 1. condaenv.sh
