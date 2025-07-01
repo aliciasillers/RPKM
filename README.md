@@ -1,4 +1,4 @@
-# RPKM: Normalized Expression Data from Public RNAseq Data
+# RPKM: Normalized Expression from Public RNAseq Data
 
 This repository contains scripts written for the creation of a gene expression atlas in strawberry, for the purpose of analyzing expression of candidate susceptibility genes. However, the scripts can be modified to get rpkm data for any gene. Workflow steps and associated scripts are listed below.
 
